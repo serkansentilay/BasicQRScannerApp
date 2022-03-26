@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_margin="3dp"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="1dp"
+        android:textSize="13sp"
+        android:id="@+id/urunbarkod"
+        android:text="ÜLKER ÇİKOLATA"
+        android:layout_height="1dp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:textSize="13sp"
+        android:id="@+id/urunadi"
+        android:text="ÜLKER ÇİKOLATA"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:id="@+id/urunadedi"
+        android:text="ADET 1"
+        android:textSize="13sp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:id="@+id/urunfiyati"
+        android:text="FİYAT 3 TL"
+        android:textSize="13sp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+
+</LinearLayout>

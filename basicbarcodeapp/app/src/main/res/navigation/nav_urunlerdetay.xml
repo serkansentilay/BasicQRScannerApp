@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_urunlerdetay"
+    app:startDestination="@id/urunlerFragment">
+
+    <fragment
+        android:id="@+id/urunlerFragment"
+        android:name="com.serkan.basicbarcodeapp.Fragments.urunler.UrunlerFragment"
+        android:label="fragment_urunler"
+        tools:layout="@layout/fragment_urunler" >
+        <action
+            android:id="@+id/action_urunlerFragment_to_urunlerDetayFragment"
+            app:destination="@id/urunlerDetayFragment" />
+        <action
+            android:id="@+id/action_urunlerFragment_to_taraFragment"
+            app:destination="@id/taraFragment" />
+        <action
+            android:id="@+id/action_urunlerFragment_to_sepetFragment"
+            app:destination="@id/sepetFragment" />
+        <argument
+            android:name="bcsearch"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/urunlerDetayFragment"
+        android:name="com.serkan.basicbarcodeapp.Fragments.urunler.UrunlerDetayFragment"
+        android:label="UrunlerDetayFragment" >
+        <action
+            android:id="@+id/action_urunlerDetayFragment_to_urunlerFragment"
+            app:destination="@id/urunlerFragment" />
+        <action
+            android:id="@+id/action_urunlerDetayFragment_to_taraFragment"
+            app:destination="@id/taraFragment" />
+        <argument
+            android:name="currentUrun"
+            app:argType="com.serkan.basicbarcodeapp.Rooms.Barcodedata" />
+    </fragment>
+    <fragment
+        android:id="@+id/taraFragment"
+        android:name="com.serkan.basicbarcodeapp.Fragments.tara.TaraFragment"
+        android:label="fragment_tara"
+        tools:layout="@layout/fragment_tara" >
+        <action
+            android:id="@+id/action_taraFragment_to_urunlerFragment"
+            app:destination="@id/urunlerFragment" />
+        <action
+            android:id="@+id/action_taraFragment_to_sepetFragment"
+            app:destination="@id/sepetFragment" />
+        <action
+            android:id="@+id/action_taraFragment_to_urunlerDetayFragment"
+            app:destination="@id/urunlerDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.serkan.basicbarcodeapp.Fragments.sepet.SepetFragment"
+        android:label="fragment_sepet"
+        tools:layout="@layout/fragment_sepet" >
+        <action
+            android:id="@+id/action_sepetFragment_to_taraFragment"
+            app:destination="@id/taraFragment" />
+        <action
+            android:id="@+id/action_sepetFragment_to_urunlerFragment"
+            app:destination="@id/urunlerFragment" />
+    </fragment>
+</navigation>
